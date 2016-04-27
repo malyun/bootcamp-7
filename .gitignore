@@ -1,1 +1,7 @@
-*pyc
+/.gitignore
+
+instruction:
+-after git adding
+-do a git commit plus message:
+	"super_sum function"
+-do git push to your Github
