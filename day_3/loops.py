@@ -31,5 +31,11 @@ f =  [(10, 20, 40), (10, 40), (4, 5, 50)]
   x:10, y:40
   x:4, y:5, z:50
   '''
-for x, y, z in f:
- 	print 'x:{}, y:{}, z:{}'.format(x, y, z)
+for i in f:
+	if len(i) == 2:
+		print 'x:{}, y:{}, z:{}'.format(x, y, z)
+	else:
+
+ 	 print 'x:{}, y:{}, '.format(x, y)
+
+ 
