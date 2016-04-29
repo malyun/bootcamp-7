@@ -1,17 +1,19 @@
-def prime_checker(number):
-  if number == 1:
-    return False
-  if number % 2 == 0:
-    return False
-  for candidate in range(3, number / 2, 2):
-    if number % candidate == 0:
-      return False
-  return True
+class PrimeChecker(object):
+  	def __init__(self, number=""):
+  		self.number = number
 
-  print prime_checker 
+  	def is_prime(self):
+  		if self.number != '':
+  			x = int(self.number)
+  			if x < 2: 
+  				return True
+  			else:
+  				for i in range(2,x):
+  					if x % i == 0:
+  						return False
+  			return True
+		else:
+  			return False
 
-  class PrimeChecker(number):
-  	def __init__(self, string):
-  		self.string = 'string'
 
-  	if 
+   

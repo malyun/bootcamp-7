@@ -1,20 +1,27 @@
-def ari_geo(A):
+def arith_geo (A): 
 
-    length = len(A)
+  if len(A) == 0:
+    return 0
 
-    for i in range(1, length+1):
+  elif is_arithmetic(A):
+    return "Arithmetic"
 
-        if A[i+1] - A[i] == A[i+2] - A[i+3]:
+  elif is_geometric(A): 
+    return "Geometric"
 
-            return "arithmetic"
+  else:
+    return -1
 
-        elif A[i+1] / A[i] == A[i+2] / A[i+1]:
-            return "geometric"
+def is_arithmetic(A):
+    difference = A[1] - A[0]
+    for index in range(len(A)-1):
+        if not (A[index + 1] - A[index] == difference):
+             return False
+    return True
 
-        elif A == None:
-            return 0
-
-        else:
-            return -1
-
-print ari_geo([2,4,6,8,10])
+def is_geometric(A):
+  ratio = A[1]/float(A[0])
+  for index in range(len(A)-1):
+    if not (A[index + 1] / float(A[index]) == ratio):
+      return False
+  return True
